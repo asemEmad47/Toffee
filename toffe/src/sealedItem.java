@@ -1,6 +1,6 @@
 public class sealedItem extends Item {
     private int units; 
-    public sealedItem(String nm, String br, String ct, String desc, double pr , double disc , int unit){
+    public sealedItem(String nm, String br, String ct, String desc, double pr , double disc , int unit , int ID){
         this.name = nm;
         this.brand = br;
         this.category = ct;
@@ -9,6 +9,7 @@ public class sealedItem extends Item {
         this.discount = disc;
         this.units = unit;
         Quantity = units;
+        this.ID = ID;
         setType();
     }
     public void setUnits(int unit){

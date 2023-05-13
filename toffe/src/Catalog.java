@@ -5,6 +5,13 @@ public class Catalog{
         db d = new db();
         item = d.FillCatalog(this);
     }
+    public Item returnItem(String name){
+        for(Item i :item){
+            if(i.getName().trim().equals(name))
+                return i;
+        }
+        return null;
+    }
     public void displayItems(){
         for(Item i :item){
             System.out.println("Name:" + " "+i.getName());

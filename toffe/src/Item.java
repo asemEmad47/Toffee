@@ -7,6 +7,10 @@ abstract public class Item{
     protected double price;
     protected double Quantity;
     protected double discount;
+    protected int ID;
+    public void setID(int id){
+        this.ID = id;
+    }
     public void setName(String nm){
         this.name = nm;
     }
@@ -31,6 +35,9 @@ abstract public class Item{
     }
     public String getBrand(){
         return brand;
+    }
+    public int getID(){
+        return ID;
     }
     public String getCategory(){
         return category;

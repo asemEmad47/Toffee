@@ -1,22 +1,17 @@
 public class Voucher {
     private int ID;
     private Double value;
-    Voucher(int id , Double val){
-            try {
-                ID = id;
-            } catch (java.util.InputMismatchException e) {
-                System.out.println("Invalid ID, write it again");
-            }
-            try {
-                value = val;
-            } catch (java.util.InputMismatchException e) {
-                System.out.println("Invalid value, write it again");
-            }
-    }
-    int getID(){
+
+    public int getID(){
         return ID;
     }
-    double getValue(){
+    public double getValue(){
         return value;
+    }
+    public void setID(int id){
+        this.ID = id;
+    }
+    public void setValue(double val){
+        this.value = val;
     }
 }

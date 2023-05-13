@@ -1,12 +1,12 @@
 import java.util.Scanner;
 public class admincatalog extends Catalog{
-
     private db database = new db();
+//---------------------------------------------------------
     public void addToList(Item it){
         item.add(it);
         database.addnewitem(it);
     }
-
+//---------------------------------------------------------
     public void removefromCatalog(String productName){
         boolean found = false;
         int counter = 0;
@@ -23,12 +23,13 @@ public class admincatalog extends Catalog{
         else    
             System.out.println("Not found");
     }
+//---------------------------------------------------------
     public void updateProductInfo(String name){
         for(Item it :item){
             String nm="",brand ="",category="",description = "",choice;
             double price=0,discount=0;
             if(it.getName().trim().equals(name)){ 
-            try (Scanner objScanner = new Scanner(System.in)) {
+            Scanner objScanner = new Scanner(System.in);
                 while(true){
                     System.out.println("choose what u want");
                     System.out.println("1-name");
@@ -102,7 +103,7 @@ public class admincatalog extends Catalog{
                     it.setDiscount(discount);
                 database.update(name, it);
                 return;
-        }}
+        }
         System.out.println("Not found");   
     }
 }
